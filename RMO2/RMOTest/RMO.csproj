@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD8A2941-FB7B-4DA1-9C81-FE0B3BB3DD12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMO</RootNamespace>
+    <AssemblyName>RMO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.LabelManager2, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.LabelManager2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasisManage\BusinessTypeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\BusinessTypeForm.Designer.cs">
+      <DependentUpon>BusinessTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\BusinessTypeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\BusinessTypeManage.Designer.cs">
+      <DependentUpon>BusinessTypeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\CsvEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\CsvEmployeeForm.Designer.cs">
+      <DependentUpon>CsvEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\CsvForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\CsvForm.Designer.cs">
+      <DependentUpon>CsvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\CsvManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\CsvManage.Designer.cs">
+      <DependentUpon>CsvManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\CurrencyForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\CurrencyForm.Designer.cs">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\CurrencyManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\CurrencyManage.Designer.cs">
+      <DependentUpon>CurrencyManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\DeptForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\DeptForm.Designer.cs">
+      <DependentUpon>DeptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\DeptManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\DeptManage.Designer.cs">
+      <DependentUpon>DeptManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\EmployeeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\EmployeeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\EmployeeManage.Designer.cs">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemKindManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemKindManage.Designer.cs">
+      <DependentUpon>ItemKindManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemManage.Designer.cs">
+      <DependentUpon>ItemManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemMunitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemMunitForm.Designer.cs">
+      <DependentUpon>ItemMunitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemUtForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemUtForm.Designer.cs">
+      <DependentUpon>ItemUtForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ItemUtManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemUtManage.Designer.cs">
+      <DependentUpon>ItemUtManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProductAreaForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProductAreaForm.Designer.cs">
+      <DependentUpon>ProductAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProductAreaManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProductAreaManage.Designer.cs">
+      <DependentUpon>ProductAreaManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProjectForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProjectManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProjectManage.Designer.cs">
+      <DependentUpon>ProjectManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProjectStageForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProjectStageForm.Designer.cs">
+      <DependentUpon>ProjectStageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ProjectStageManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ProjectStageManage.Designer.cs">
+      <DependentUpon>ProjectStageManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\SalesTypeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\SalesTypeForm.Designer.cs">
+      <DependentUpon>SalesTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\SalesTypeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\SalesTypeManage.Designer.cs">
+      <DependentUpon>SalesTypeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ShippingAddressForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ShippingAddressForm.Designer.cs">
+      <DependentUpon>ShippingAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\ShippingAddressManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ShippingAddressManage.Designer.cs">
+      <DependentUpon>ShippingAddressManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\WarehouseForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\WarehouseForm.Designer.cs">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasisManage\WarehouseManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisManage\WarehouseManage.Designer.cs">
+      <DependentUpon>WarehouseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommomHelper.cs" />
+    <Compile Include="BasisManage\ItemKindForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasisManage\ItemKindForm.Designer.cs">
+      <DependentUpon>ItemKindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsvHelper.cs" />
+    <Compile Include="ExcelTest.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailClass.cs" />
+    <Compile Include="QueryDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryDataForm.Designer.cs">
+      <DependentUpon>QueryDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm.Designer.cs">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryTreeDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryTreeDataForm.Designer.cs">
+      <DependentUpon>QueryTreeDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\Barcode.designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\Form3.designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\Form5.designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\PlanningOrderInfoInputManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\PlanningOrderInfoInputManage.Designer.cs">
+      <DependentUpon>PlanningOrderInfoInputManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoEwmManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoEwmManage.Designer.cs">
+      <DependentUpon>ShippingInfoEwmManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\PgmTransferWarningSettingForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysManage\PgmTransferWarningSettingForm.Designer.cs">
+      <DependentUpon>PgmTransferWarningSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\PlanningOrderInfoInputForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\PlanningOrderInfoInputForm.Designer.cs">
+      <DependentUpon>PlanningOrderInfoInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\InputByCollectionOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\InputByCollectionOrderForm.Designer.cs">
+      <DependentUpon>InputByCollectionOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\InputByPlanningOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\InputByPlanningOrderForm.Designer.cs">
+      <DependentUpon>InputByPlanningOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\RequestCollectionOrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\RequestCollectionOrderForm.Designer.cs">
+      <DependentUpon>RequestCollectionOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\RequestCollectionOrderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\RequestCollectionOrderManage.Designer.cs">
+      <DependentUpon>RequestCollectionOrderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoConfirmOrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoConfirmOrderForm.Designer.cs">
+      <DependentUpon>ShippingInfoConfirmOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoConfirmOrderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\ShippingInfoConfirmOrderManage.Designer.cs">
+      <DependentUpon>ShippingInfoConfirmOrderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\TaskNotifyOrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\TaskNotifyOrderForm.Designer.cs">
+      <DependentUpon>TaskNotifyOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RmoManagement\TaskNotifyOrderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RmoManagement\TaskNotifyOrderManage.Designer.cs">
+      <DependentUpon>TaskNotifyOrderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\PgmTransferWarningSettingManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysManage\PgmTransferWarningSettingManage.Designer.cs">
+      <DependentUpon>PgmTransferWarningSettingManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\RoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysManage\RoleManage.Designer.cs">
+      <DependentUpon>RoleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\RoleUcForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysManage\RoleUcForm.Designer.cs">
+      <DependentUpon>RoleUcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm.Designer.cs">
+      <DependentUpon>SubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\UsrManageModel.cs" />
+    <Compile Include="TextBoxContainButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxContainButton.Designer.cs">
+      <DependentUpon>TextBoxContainButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\UsrManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysManage\UsrManage.Designer.cs">
+      <DependentUpon>UsrManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\UsrUcForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SysManage\UsrUcForm.Designer.cs">
+      <DependentUpon>UsrUcForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BasisManage\BusinessTypeForm.resx">
+      <DependentUpon>BusinessTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\BusinessTypeManage.resx">
+      <DependentUpon>BusinessTypeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\CsvEmployeeForm.resx">
+      <DependentUpon>CsvEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\CsvForm.resx">
+      <DependentUpon>CsvForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\CsvManage.resx">
+      <DependentUpon>CsvManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\CurrencyForm.resx">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\CurrencyManage.resx">
+      <DependentUpon>CurrencyManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\DeptForm.resx">
+      <DependentUpon>DeptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\DeptManage.resx">
+      <DependentUpon>DeptManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\EmployeeManage.resx">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemKindManage.resx">
+      <DependentUpon>ItemKindManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemManage.resx">
+      <DependentUpon>ItemManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemMunitForm.resx">
+      <DependentUpon>ItemMunitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemUtForm.resx">
+      <DependentUpon>ItemUtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemUtManage.resx">
+      <DependentUpon>ItemUtManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProductAreaForm.resx">
+      <DependentUpon>ProductAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProductAreaManage.resx">
+      <DependentUpon>ProductAreaManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProjectManage.resx">
+      <DependentUpon>ProjectManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProjectStageForm.resx">
+      <DependentUpon>ProjectStageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ProjectStageManage.resx">
+      <DependentUpon>ProjectStageManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\SalesTypeForm.resx">
+      <DependentUpon>SalesTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\SalesTypeManage.resx">
+      <DependentUpon>SalesTypeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ItemKindForm.resx">
+      <DependentUpon>ItemKindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ShippingAddressForm.resx">
+      <DependentUpon>ShippingAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\ShippingAddressManage.resx">
+      <DependentUpon>ShippingAddressManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\WarehouseForm.resx">
+      <DependentUpon>WarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisManage\WarehouseManage.resx">
+      <DependentUpon>WarehouseManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QueryDataForm.resx">
+      <DependentUpon>QueryDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm.resx">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryTreeDataForm.resx">
+      <DependentUpon>QueryTreeDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\PlanningOrderInfoInputManage.resx">
+      <DependentUpon>PlanningOrderInfoInputManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\ShippingInfoEwmManage.resx">
+      <DependentUpon>ShippingInfoEwmManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\PgmTransferWarningSettingForm.resx">
+      <DependentUpon>PgmTransferWarningSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\PlanningOrderInfoInputForm.resx">
+      <DependentUpon>PlanningOrderInfoInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\InputByCollectionOrderForm.resx">
+      <DependentUpon>InputByCollectionOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\InputByPlanningOrderForm.resx">
+      <DependentUpon>InputByPlanningOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\RequestCollectionOrderForm.resx">
+      <DependentUpon>RequestCollectionOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\RequestCollectionOrderManage.resx">
+      <DependentUpon>RequestCollectionOrderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\ShippingInfoConfirmOrderForm.resx">
+      <DependentUpon>ShippingInfoConfirmOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\ShippingInfoConfirmOrderManage.resx">
+      <DependentUpon>ShippingInfoConfirmOrderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\TaskNotifyOrderForm.resx">
+      <DependentUpon>TaskNotifyOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RmoManagement\TaskNotifyOrderManage.resx">
+      <DependentUpon>TaskNotifyOrderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\PgmTransferWarningSettingManage.resx">
+      <DependentUpon>PgmTransferWarningSettingManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\RoleManage.resx">
+      <DependentUpon>RoleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\RoleUcForm.resx">
+      <DependentUpon>RoleUcForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm.resx">
+      <DependentUpon>SubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxContainButton.resx">
+      <DependentUpon>TextBoxContainButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\UsrManage.resx">
+      <DependentUpon>UsrManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysManage\UsrUcForm.resx">
+      <DependentUpon>UsrUcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
